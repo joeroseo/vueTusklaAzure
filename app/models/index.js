@@ -19,6 +19,12 @@ const db = {};
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
-db.tutorials = require("./tutorial.model.js")(sequelize, Sequelize);
+db.carts = require("./cart.model.js")(sequelize, Sequelize);
+db.orders = require("./order.model.js")(sequelize, Sequelize);
+db.orderinfo = require("./orderinfo.model.js")(sequelize, Sequelize);
+db.products = require("./product.model.js")(sequelize, Sequelize);
+db.vehicleorders = require("./vehicleorder.model.js")(sequelize, Sequelize);
+db.vehicleorderinfo = require("./vehicleorderinfo.model.js")(sequelize, Sequelize);
+db.datainfo = require("./datainfo.model.js")(sequelize, Sequelize);
 
 module.exports = db;
